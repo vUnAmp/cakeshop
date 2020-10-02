@@ -1,0 +1,81 @@
+.footer {
+  border-top: 2px solid #fde5ea;
+  .wrap {
+    max-width: 1450px;
+    padding: 20px 10px;
+    margin: 0 auto;
+  }
+  .card-title {
+    font-size: 2rem;
+    padding-left: 4rem;
+  }
+  .card {
+    font-size: 1.6rem;
+    border: none;
+    padding: 2rem 1rem;
+    box-shadow: none;
+    span {
+      padding-top: 3rem;
+      padding-left: 4rem;
+      font-size: 1.6rem;
+    }
+    li {
+      list-style: none;
+      padding: 0.6rem 0;
+      svg {
+        margin-right: 6px;
+      }
+    }
+  }
+}
+.callus_now {
+  button {
+    margin-top: 1.6rem;
+    text-transform: none;
+    background: transparent;
+    color: #9c0746;
+    border: 1px solid #9c0746;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 152px;
+    transition: 0.5s;
+    overflow: hidden;
+    position: relative;
+    span {
+      --c: #9c0746;
+      position: absolute;
+      width: 25%;
+      height: 100%;
+      background-color: var(--c);
+      transform: translateY(150%);
+      border-radius: 50%;
+      left: calc((var(--n) - 1) * 25%);
+      transition: 0.5s;
+      transition-delay: calc((var(--n) - 1) * 0.1s);
+      z-index: -1;
+    }
+  }
+}
+.callus_now button:hover {
+  color: white;
+  background: #9c0746;
+}
+.callus_now button:hover span {
+  transform: translateY(0) scale(2);
+}
+.callus_now button span:nth-child(1) {
+  --n: 1;
+}
+
+.callus_now button span:nth-child(2) {
+  --n: 2;
+}
+
+.callus_now button span:nth-child(3) {
+  --n: 3;
+}
+
+.callus_now button span:nth-child(4) {
+  --n: 4;
+}

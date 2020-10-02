@@ -1,0 +1,362 @@
+.header {
+  height: 6.5rem;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background: #fde5ea;
+  // #9c0746
+
+  .wrap {
+    position: relative;
+    height: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    .logo {
+      width: 13rem;
+      height: 100%;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        object-fit: contain;
+      }
+      svg {
+        font-size: 33px;
+        top: 50%;
+        position: relative;
+        transform: translateY(-50%);
+      }
+    }
+
+    nav {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      transform: translateX(-10%);
+
+      ul,
+      ul li {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+      }
+
+      ul {
+        text-align: center;
+
+        li {
+          display: inline-block;
+          margin: 0 0.5rem;
+          list-style-type: none;
+
+          a {
+            font-size: 1.2rem;
+            line-height: 6.5rem;
+            padding: 0.6rem 0.6rem;
+            vertical-align: middle;
+            color: #130f11;
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid #fde5ea;
+            border-radius: 0.8rem;
+            // text-transform: uppercase;
+            cursor: pointer;
+          }
+        }
+      }
+      ul li:hover {
+        &:hover a {
+          color: #9c0746;
+          background: white;
+          border: 1px solid #9c0746;
+        }
+      }
+    }
+
+    .callToActions {
+      position: absolute;
+
+      top: 50%;
+      right: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        display: inline-block;
+        list-style-type: none;
+        margin-right: 1.5rem;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a,
+        span {
+          font-size: 1.8rem;
+          line-height: 1;
+          color: #130f11;
+          text-decoration: none;
+          // text-transform: uppercase;
+          cursor: pointer;
+        }
+      }
+      .hotline {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 2rem;
+        p {
+          margin: 0;
+          padding: 0;
+        }
+        .hotline_number {
+          color: #9c0746;
+          font-weight: 500;
+          padding-bottom: 2px;
+          // padding-bottom: 5px;
+        }
+        .hotline_desc {
+          font-size: 11px;
+          text-align: center;
+          text-transform: none;
+        }
+      }
+      .wehave {
+        button {
+          text-transform: none;
+          background: transparent;
+          color: #9c0746;
+          border: 1px solid #9c0746;
+          border-radius: 20px;
+          font-size: 1.6rem;
+          padding: 1.3rem 2rem;
+          width: 152px;
+          transition: 0.5s;
+          overflow: hidden;
+          position: relative;
+          span {
+            --c: #9c0746;
+            position: absolute;
+            width: 25%;
+            height: 100%;
+            background-color: var(--c);
+            transform: translateY(150%);
+            border-radius: 50%;
+            left: calc((var(--n) - 1) * 25%);
+            transition: 0.5s;
+            transition-delay: calc((var(--n) - 1) * 0.1s);
+            z-index: -1;
+          }
+        }
+      }
+      .wehave button:hover {
+        color: white;
+      }
+      .wehave button:hover span {
+        transform: translateY(0) scale(2);
+      }
+      .wehave button span:nth-child(1) {
+        --n: 1;
+      }
+
+      .wehave button span:nth-child(2) {
+        --n: 2;
+      }
+
+      .wehave button span:nth-child(3) {
+        --n: 3;
+      }
+
+      .wehave button span:nth-child(4) {
+        --n: 4;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .logo {
+    svg {
+      display: none;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .logo {
+    img {
+      display: none !important;
+    }
+  }
+  .wrap {
+    nav {
+      display: none !important;
+    }
+  }
+  .bm-burger-button {
+    display: block !important;
+  }
+}
+// BugerMenu
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 21px;
+  display: none;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #9c0746;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #faeef1;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  // fill: #373a47;
+  fill: #fde5ea;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+  height: 90%;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+}
+/* Link inside CSS*/
+.burger_menu {
+  height: 90%;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 71%;
+    padding-top: 3rem;
+    a {
+      color: #9c0746 !important;
+      font-size: 1.8rem;
+    }
+  }
+  ul li {
+    list-style: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+.wrap_logo {
+  h3 {
+    text-align: center;
+    color: #9c0746;
+  }
+  a {
+    height: 100px;
+    width: 100px;
+    display: block;
+    margin: auto;
+    padding-bottom: 1rem;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+.wrap_user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3rem;
+  button {
+    min-width: 30%;
+    border-radius: 10px;
+    padding: 0.3rem 1rem;
+    a:hover {
+      text-decoration: none;
+    }
+    outline: none;
+    a {
+      outline: none;
+    }
+  }
+  .login {
+    color: #1574f5;
+    border: 1px solid #e7e7e7;
+    background: white;
+  }
+  .registration {
+    color: #e7e7e7;
+    border: 1px solid #1574f5;
+    background: #1574f5;
+    font-size: 1.6rem;
+    a {
+      color: #e7e7e7;
+    }
+  }
+}

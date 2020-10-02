@@ -1,0 +1,19 @@
+.step_number {
+  border: 1px solid #9c0746;
+  padding: 2rem 1rem;
+
+  span {
+    width: 2rem;
+    min-width: 2rem;
+    height: 2rem;
+    background: #9c0746;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 2rem;
+    font-weight: bold;
+  }
+  p {
+    color: #9c0746;
+  }
+}

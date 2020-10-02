@@ -1,0 +1,16 @@
+.thumbs-wrapper {
+  .thumbs {
+    display: flex;
+    justify-content: center;
+  }
+}
+.slide {
+  max-height: 450px;
+}
+.legend {
+  font-size: 36px !important;
+  font-style: italic !important;
+  color: white !important;
+  opacity: 1 !important;
+  background: rgba(0, 0, 0, 0.3) !important;
+}

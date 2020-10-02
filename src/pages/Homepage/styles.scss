@@ -1,0 +1,53 @@
+.homepage {
+  // height: calc(100% - 6.5rem - 5.8rem);
+}
+.section_title {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1.3rem;
+  color: chocolate;
+  font-size: 3rem;
+}
+.section_desc {
+  margin: auto;
+  max-width: 450px;
+  padding-bottom: 2rem;
+  line-height: 1.6;
+  letter-spacing: 0.9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+.section_left {
+  height: auto;
+  min-height: 250px;
+  background-image: url(https://www.derkuchenladen.de/wp-content/uploads/2018/10/firmen-torte-patisserie-tortendesign-berlin-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.section_left2 {
+  background-image: url(https://www.derkuchenladen.de/wp-content/uploads/2018/10/baecker-berlin-kuchen-torten-1310x873.jpg);
+}
+.section_right {
+  font-size: 1.6rem;
+
+  background: chocolate;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem 1rem;
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  text-align: center;
+  span {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+.section_right2 {
+  background: #bdaa7d;
+}
