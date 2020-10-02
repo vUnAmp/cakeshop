@@ -126,6 +126,7 @@
         flex-direction: column;
         justify-content: center;
         margin-right: 2rem;
+        margin-top: 4px;
         p {
           margin: 0;
           padding: 0;
@@ -217,15 +218,22 @@
   .bm-burger-button {
     display: block !important;
   }
+  .hotline_number {
+    font-size: 1.6rem !important;
+  }
+  .wehave button {
+    font-size: 1.4rem !important;
+    width: 130px !important;
+  }
 }
 // BugerMenu
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: absolute;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 21px;
+  width: 32px;
+  height: 28px;
+  left: 26px;
+  top: 18px;
   display: none;
 }
 
