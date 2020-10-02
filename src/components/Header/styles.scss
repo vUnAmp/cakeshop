@@ -134,6 +134,8 @@
           color: #9c0746;
           font-weight: 500;
           padding-bottom: 2px;
+          font-size: 1.8rem;
+          line-height: 1.8rem;
           // padding-bottom: 5px;
         }
         .hotline_desc {
@@ -150,7 +152,7 @@
           border: 1px solid #9c0746;
           border-radius: 20px;
           font-size: 1.6rem;
-          padding: 1.3rem 2rem;
+          // padding: 1.3rem 2rem;
           width: 152px;
           transition: 0.5s;
           overflow: hidden;
@@ -201,7 +203,7 @@
     }
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .logo {
     img {
       display: none !important;
@@ -302,9 +304,19 @@ Note: Beware of modifying this element as it can break the animations - you shou
       color: #9c0746 !important;
       font-size: 1.8rem;
     }
+    padding-left: 10px;
   }
   ul li {
+    display: flex;
     list-style: none;
+    color: #9c0746;
+    font-size: 2rem;
+    svg {
+      margin-top: 3px;
+    }
+    a {
+      margin-left: 16px;
+    }
   }
   &:focus {
     outline: none;

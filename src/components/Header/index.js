@@ -8,61 +8,19 @@ import './styles.scss';
 import Logo from './../../assets/logo.png';
 import Button from '../forms/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faBorderNone } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHome,
+  faSearch,
+  faBlog,
+  faPhone,
+} from '@fortawesome/free-solid-svg-icons';
 import { slide as Menu } from 'react-burger-menu';
 
 const mapState = (state) => ({
   currentUser: state.user.currentUser,
   totalNumCartItems: selectCartItemsCount(state),
 });
-const styles = {
-  bmBurgerButton: {
-    position: 'fixed',
-    width: '36px',
-    height: '30px',
-    left: '36px',
-    top: '20px',
-    display: 'none',
-  },
 
-  bmBurgerBars: {
-    background: '#373a47',
-  },
-  bmBurgerBarsHover: {
-    background: '#a90000',
-  },
-  bmCrossButton: {
-    height: '24px',
-    width: '24px',
-  },
-  bmCross: {
-    background: '#bdc3c7',
-  },
-  bmMenuWrap: {
-    position: 'fixed',
-    height: '100%',
-    top: 0,
-  },
-  bmMenu: {
-    background: '#373a47',
-    padding: '2.5em 1.5em 0',
-    fontSize: '1.15em',
-  },
-  bmMorphShape: {
-    fill: '#373a47',
-  },
-  bmItemList: {
-    color: '#b8b7ad',
-    padding: '0.8em',
-  },
-  bmItem: {
-    display: 'inline-block',
-  },
-  bmOverlay: {
-    background: 'rgba(0, 0, 0, 0.3)',
-    top: 0,
-  },
-};
 const Header = (props) => {
   const dispatch = useDispatch();
   const { currentUser, totalNumCartItems } = useSelector(mapState);
@@ -79,18 +37,6 @@ const Header = (props) => {
     <div className='header'>
       <div className='wrap'>
         <div className='logo'>
-          {/* <div className='menubar-modal-box' id='menubarLeft'>
-            <input type='checkbox' name='' id='menubar-toggle' />
-            <label htmlFor='menubar-toggle' className='menubar-icon'>
-              <FontAwesomeIcon icon={faBars} />
-            </label>
-            <div className='menubar-header'>
-              <label htmlFor='menubar-toggle' className='menubar-close'>
-                {' '}
-                &#10005;
-              </label>
-            </div>
-          </div> */}
           <Link to='/'>
             <img src={Logo} alt='Bakery OnlineShop' />
           </Link>
@@ -179,15 +125,19 @@ const Header = (props) => {
           </div>
           <ul>
             <li>
+              <FontAwesomeIcon icon={faHome} />
               <Link to='/'>Home</Link>
             </li>
             <li>
+              <FontAwesomeIcon icon={faSearch} />
               <Link to='/search'>Search</Link>
             </li>
             <li>
+              <FontAwesomeIcon icon={faBlog} />
               <Link to='/blog'>Blog</Link>
             </li>
             <li>
+              <FontAwesomeIcon icon={faPhone} />
               <Link to='/contact'>Contact</Link>
             </li>
           </ul>
